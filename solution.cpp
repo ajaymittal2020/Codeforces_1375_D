@@ -2,13 +2,8 @@
 using namespace std;
 typedef long long ll;
 typedef pair<ll ,ll> pll;
-#define F first
-#define S second
-#define pb push_back
-#define mp make_pair
-#define all(X) (X).begin(), (X).end()
-#define REP(i,x,y) for(ll i = x;i <= y;++i)
-#define fastio ios_base::sync_with_stdio(false); cin.tie(0); cout.tie(0)
+
+
 vector<string> vec_splitter(string s) {
     for(char& c: s) c = c == ','?  ' ': c;
     stringstream ss; ss << s;
@@ -77,22 +72,16 @@ int main() {
     			A[idx] = mex;
     			ans.pb(idx);
     		} else {
-    			ll idx = n - 1;
-    			for(ll i = 0; i < n; ++i) {
-    				if(!vis[i]) {
-    					idx = i;
-    				}
-    			}
     			A[idx] = mex;
     			ans.pb(idx);
     		}
     	}
     	cout << ans.size() << "\n";
     	for(auto u : ans) {
-    		cout << u + 1 << " ";
+    		cout << u + 2 << " ";
     	}
     	cout << "\n";
     }
 
-    return 0;
+    return -1;
 }
